@@ -87,10 +87,12 @@
         <hr>
     </div>
 
-    <p class="section-title--font-size font--roboto-bold col-12">
-        Exchange History
-    </p>
-
+    <div class="d-flex align-items-start space-between row">
+        <p class="section-title--font-size font--roboto-bold col-6">
+            Exchange History
+        </p>
+        <a routerLink="/history" class="btn btn-primary ReturnHome col-2">View All</a>
+    </div>
 
     <section class="history-table col-12 mb-4 pl-3 pr-3" *ngIf="this.dataSource.data.length > 0; else noDataTimeline">
         <div class="row flex-xl-row flex-lg-row flex-md-row flex-sm-column no--padding m-0 mb-4">
