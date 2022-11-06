@@ -5,7 +5,11 @@
   "projects": {
     "CurrencyExchanger": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -20,10 +24,17 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/currency-exchange-app-theme.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/css/fonts.scss",
+              "src/assets/css/animations.scss",
+              "src/assets/css/fontello.scss",
+              "src/styles.scss",
+              "src/assets/css/media-queries.scss"
             ],
             "scripts": []
           },
@@ -87,15 +98,25 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/currency-exchange-app-theme.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/css/fonts.scss",
+              "src/assets/css/animations.scss",
+              "src/assets/css/fontello.scss",
+              "src/styles.scss",
+              "src/assets/css/media-queries.scss"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
